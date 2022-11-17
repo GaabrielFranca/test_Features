@@ -1,9 +1,10 @@
 import React from "react";
+import Search from "./Features/Search";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Search />
     </div>
   );
 };
