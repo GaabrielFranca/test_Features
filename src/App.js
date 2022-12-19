@@ -1,11 +1,13 @@
 import React from "react";
+import { Arrays } from "./Features/Arrays";
 import Search from "./Features/Search";
 
 const App = () => {
   return (
-    <div>
-      <Search />
-    </div>
+    <>
+      <h1>Memory</h1>
+      <Arrays />
+    </>
   );
 };
 

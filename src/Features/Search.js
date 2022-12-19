@@ -1,11 +1,15 @@
 import React from "react";
 
-const products = ["Notebook", "Smartphone", "Tablet", "tv", "smarthTv"];
+const products = [
+  { name: "notebook", price: "3500", title: "blablabla" },
+  { name: "Tv", price: "6500", title: "blablabla" },
+  { name: "SmarthTv", price: "7500", title: "blablabla" },
+];
 
 const Search = () => {
   const [search, setSearch] = React.useState("");
-  const productsFilter = products.filter((product) =>
-    product.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+  const productsFilter = products.filter(({ name }) =>
+    name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
   );
 
   return (
@@ -15,8 +19,11 @@ const Search = () => {
         onChange={({ target }) => setSearch(target.value)}
       ></input>
       <h1>Produtct</h1>
-      {productsFilter.map((product) => (
-        <li key={product}>{product}</li>
+      {productsFilter.map(({ name, price }) => (
+        <>
+          <li key={name}>{name}</li>
+          <p>{price}</p>
+        </>
       ))}
     </div>
   );
