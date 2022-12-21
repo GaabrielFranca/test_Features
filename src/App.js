@@ -1,12 +1,10 @@
-import React from "react";
-import { Arrays } from "./Features/Arrays";
-import Search from "./Features/Search";
-
+import React, { useState } from "react";
+import "./App.css";
+import Stack from "./Features/Stack";
 const App = () => {
   return (
     <>
-      <h1>Memory</h1>
-      <Arrays />
+      <Stack />
     </>
   );
 };
